@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top shadow-sm" id="mainNavbar">
+      <div class="container">
+        <!-- Logo / Name -->
+        <a class="navbar-brand fw-bold" href="#hero">Arif Rahman</a>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Links -->
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-2 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button
+                id="theme-toggle"
+                class="btn btn-sm theme-toggle-btn"
+                title="Toggle theme"
+              >
+                <span id="theme-icon">🌙</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="hero">
+      <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+          <img
+            class="d-block mx-auto mb-4 img-profile"
+            src="images/my-img-profile.JPG"
+            alt="my-photo-profile"
+          />
+          <h1 class="display-5 fw-bold text-body-emphasis">Arif Rahman</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+              Python Developer | Automation & Web Scraping
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <!-- Teks About -->
+          <div class="col-md-8">
+            <h2 class="fw-bold mb-3">About Me</h2>
+            <p class="text-body-secondary">
+              I'm a Python developer focused on web scraping and automation. I
+              am a motivated learner with a strong interest in technology,
+              particularly in Python and AI development. Currently, I am
+              building my skills step by step, focusing on practical projects to
+              improve my problem-solving abilities. I am passionate about
+              continuous learning and aim to grow into a professional who can
+              create meaningful and impactful digital solutions.
+            </p>
+            <p class="text-body-secondary">
+              Currently working on projects involving BeautifulSoup, Flask, and
+              task automation — always looking to learn and deliver value.
+            </p>
+          </div>
+
+          <!-- Stats / Highlights -->
+          <div class="col-md-4">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">
+                <span>📍 Location</span>
+                <strong>Indonesia</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>💼 Status</span>
+                <strong>Open to Work</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>🌐 Language</span>
+                <strong>EN / ID</strong>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>⚙️ Focus</span>
+                <strong>Scraping & Automation</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="container py-5">
+        <h2 class="fw-bold mb-4 text-center">Skills</h2>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 text-center shadow-sm">
+              <div class="card-body">
+                <div class="fs-1 mb-3">🕷️</div>
+                <h5 class="card-title fw-bold">Web Scraping</h5>
+                <p class="card-text text-body-secondary">
+                  Extracting structured data from websites using Python.
+                </p>
+                <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+                  <span class="badge bg-secondary">BeautifulSoup</span>
+                  <span class="badge bg-secondary">Requests</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 text-center shadow-sm">
+              <div class="card-body">
+                <div class="fs-1 mb-3">⚙️</div>
+                <h5 class="card-title fw-bold">Automation</h5>
+                <p class="card-text text-body-secondary">
+                  Automating repetitive tasks to save time and reduce errors.
+                </p>
+                <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+                  <span class="badge bg-secondary">Python Scripts</span>
+                  <span class="badge bg-secondary">Scheduling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 text-center shadow-sm">
+              <div class="card-body">
+                <div class="fs-1 mb-3">🌐</div>
+                <h5 class="card-title fw-bold">Web Development</h5>
+                <p class="card-text text-body-secondary">
+                  Building simple and functional web apps with Python.
+                </p>
+                <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+                  <span class="badge bg-secondary">Flask</span>
+                  <span class="badge bg-secondary">HTML & CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="project">
+      <div class="container py-5">
+        <h2 class="fw-bold mb-4 text-center">Projects</h2>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Project 1 -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="fs-1 mb-3">🛒</div>
+                <h5 class="card-title fw-bold">Amazon Price Tracker</h5>
+                <p class="card-text text-body-secondary">
+                  A Python tool that monitors Amazon product prices and sends
+                  email alerts when prices drop below a target value.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <span class="badge bg-secondary">Python</span>
+                  <span class="badge bg-secondary">BeautifulSoup</span>
+                  <span class="badge bg-secondary">Requests</span>
+                  <span class="badge bg-secondary">smtplib</span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent d-flex gap-2">
+                <a
+                  href="https://github.com/arlearning313-code/amazon-price-tracker.git"
+                  target="_blank"
+                  class="btn btn-sm btn-secondary w-100"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - Coming Soon -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-dashed">
+              <div
+                class="card-body text-center d-flex flex-column justify-content-center"
+              >
+                <div class="fs-1 mb-3">🔧</div>
+                <h5 class="card-title fw-bold text-body-secondary">
+                  Next Project
+                </h5>
+                <p class="card-text text-body-secondary">
+                  Currently in progress. Check back soon.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container py-5">
+        <h2 class="fw-bold mb-2 text-center">Contact</h2>
+        <p class="text-center text-body-secondary mb-5">
+          Have a project in mind? Let's talk.
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body p-4">
+                <!-- Email -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="fs-3">📧</div>
+                  <div>
+                    <div class="fw-bold">Email</div>
+                    <a
+                      href="mailto:arlearning313@gmail.com"
+                      class="text-body-secondary text-decoration-none"
+                    >
+                      arlearning313@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- GitHub -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="fs-3">💻</div>
+                  <div>
+                    <div class="fw-bold">GitHub</div>
+                    <a
+                      href="https://github.com/arlearning313-code"
+                      target="_blank"
+                      class="text-body-secondary text-decoration-none"
+                    >
+                      github.com/arlearning313-code
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Status -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="fs-3">🟢</div>
+                  <div>
+                    <div class="fw-bold">Status</div>
+                    <span class="text-body-secondary"
+                      >Available for freelance work</span
+                    >
+                  </div>
+                </div>
+
+                <a
+                  href="mailto:arlearning313@gmail.com"
+                  class="btn btn-secondary w-100 mt-2"
+                >
+                  Send Me an Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // ─── Theme Toggle ───────────────────────────────
+    const toggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const html = document.documentElement;
+
+    // Cek preferensi tersimpan
+    const savedTheme = localStorage.getItem("theme") || "light";
+    html.setAttribute("data-bs-theme", savedTheme);
+    themeIcon.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+    toggleBtn.addEventListener("click", () => {
+      const isDark = html.getAttribute("data-bs-theme") === "dark";
+      const newTheme = isDark ? "light" : "dark";
+
+      html.setAttribute("data-bs-theme", newTheme);
+      themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
+      localStorage.setItem("theme", newTheme);
+    });
+
+    // ─── Hide/Show Navbar on Scroll ──────────────────
+    let lastScrollY = window.scrollY;
+    let isNavClick = false;
+    const navbar = document.getElementById("mainNavbar");
+
+    // Tandai kalau user klik nav link
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        isNavClick = true;
+        navbar.classList.remove("hidden");
+
+        // Reset flag setelah scroll selesai
+        setTimeout(() => {
+          isNavClick = false;
+          lastScrollY = window.scrollY;
+        }, 800);
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      if (isNavClick) return; // Abaikan scroll dari klik nav
+
+      if (window.scrollY > lastScrollY && window.scrollY > 80) {
+        navbar.classList.add("hidden");
+      } else {
+        navbar.classList.remove("hidden");
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+</html>
