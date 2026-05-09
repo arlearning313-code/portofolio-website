@@ -2,351 +2,371 @@
 <html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <title>My Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arif Rahman — Python Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md fixed-top shadow-sm" id="mainNavbar">
-      <div class="container">
-        <!-- Logo / Name -->
-        <a class="navbar-brand fw-bold" href="#hero">Arif Rahman</a>
 
-        <!-- Hamburger (mobile) -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
+    <!-- ── Navbar ──────────────────────────────── -->
+    <nav class="navbar navbar-expand-md fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">
+          <span class="brand-text">Arif<span class="brand-accent">.</span></span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto gap-2 align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#project">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <button
-                id="theme-toggle"
-                class="btn btn-sm theme-toggle-btn"
-                title="Toggle theme"
-              >
-                <span id="theme-icon">🌙</span>
+          <ul class="navbar-nav ms-auto gap-1 align-items-center">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#project">Projects</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
+            <li class="nav-item ms-2">
+              <button id="theme-toggle" class="btn theme-toggle-btn" title="Toggle theme">
+                <i id="theme-icon" class="bi bi-moon-fill"></i>
               </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <section id="hero">
-      <div class="container">
-        <div class="px-4 py-5 my-5 text-center">
-          <img
-            class="d-block mx-auto mb-4 img-profile"
-            src="images/my-img-profile.JPG"
-            alt="my-photo-profile"
-          />
-          <h1 class="display-5 fw-bold text-body-emphasis">Arif Rahman</h1>
-          <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">
-              Python Developer | Automation & Web Scraping
-            </p>
+
+    <!-- ── Hero ────────────────────────────────── -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-pattern"></div>
+      <div class="container hero-container">
+        <div class="text-center">
+          <div class="hero-avatar-wrapper mb-4">
+            <img class="hero-avatar" src="images/my-img-profile.JPG" alt="Arif Rahman" />
+            <div class="hero-avatar-ring"></div>
+          </div>
+          <div class="hero-badge mb-3">
+            <span class="badge-dot"></span>
+            Available for work
+          </div>
+          <h1 class="hero-title mb-3">Arif Rahman</h1>
+          <p class="hero-subtitle mb-5">
+            <span class="typed-prefix">I build </span><span id="typed-text" class="typed-text"></span><span class="typed-cursor">|</span>
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="#project" class="btn btn-primary-custom">
+              View Projects <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline-custom">
+              Contact Me <i class="bi bi-send ms-1"></i>
+            </a>
           </div>
         </div>
       </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
     </section>
+
+    <!-- ── About ───────────────────────────────── -->
     <section id="about">
-      <div class="container py-5">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">Get to know me</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
         <div class="row align-items-center g-5">
-          <!-- Teks About -->
-          <div class="col-md-8">
-            <h2 class="fw-bold mb-3">About Me</h2>
-            <p class="text-body-secondary">
-              I'm a Python developer focused on web scraping and automation. I
-              am a motivated learner with a strong interest in technology,
-              particularly in Python and AI development. Currently, I am
-              building my skills step by step, focusing on practical projects to
-              improve my problem-solving abilities. I am passionate about
-              continuous learning and aim to grow into a professional who can
-              create meaningful and impactful digital solutions.
+          <div class="col-md-7" data-aos="fade-right">
+            <p class="about-text">
+              I'm a <strong>Python developer</strong> focused on web scraping and automation. I'm a motivated learner with a strong interest in technology, particularly in Python and AI development.
             </p>
-            <p class="text-body-secondary">
-              Currently working on projects involving BeautifulSoup, Flask, and
-              task automation — always looking to learn and deliver value.
+            <p class="about-text">
+              Currently building my skills step by step, focusing on practical projects to sharpen my problem-solving abilities. I'm passionate about continuous learning and aim to grow into a professional who creates meaningful digital solutions.
+            </p>
+            <p class="about-text">
+              Working on projects involving <strong>BeautifulSoup</strong>, <strong>Flask</strong>, and task automation — always looking to learn and deliver value.
             </p>
           </div>
-
-          <!-- Stats / Highlights -->
-          <div class="col-md-4">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex justify-content-between">
-                <span>📍 Location</span>
-                <strong>Indonesia</strong>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>💼 Status</span>
-                <strong>Open to Work</strong>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>🌐 Language</span>
-                <strong>EN / ID</strong>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>⚙️ Focus</span>
-                <strong>Scraping & Automation</strong>
-              </li>
-            </ul>
+          <div class="col-md-5" data-aos="fade-left">
+            <div class="about-stats-grid">
+              <div class="about-stat-item">
+                <div class="stat-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <div class="stat-label">Location</div>
+                  <div class="stat-value">Indonesia</div>
+                </div>
+              </div>
+              <div class="about-stat-item">
+                <div class="stat-icon"><i class="bi bi-briefcase-fill"></i></div>
+                <div>
+                  <div class="stat-label">Status</div>
+                  <div class="stat-value open-to-work">Open to Work</div>
+                </div>
+              </div>
+              <div class="about-stat-item">
+                <div class="stat-icon"><i class="bi bi-translate"></i></div>
+                <div>
+                  <div class="stat-label">Languages</div>
+                  <div class="stat-value">EN / ID</div>
+                </div>
+              </div>
+              <div class="about-stat-item">
+                <div class="stat-icon"><i class="bi bi-gear-fill"></i></div>
+                <div>
+                  <div class="stat-label">Focus</div>
+                  <div class="stat-value">Scraping & Automation</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="skills">
-      <div class="container py-5">
-        <h2 class="fw-bold mb-4 text-center">Skills</h2>
 
+    <!-- ── Skills ──────────────────────────────── -->
+    <section id="skills" class="section-alt">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">What I do</span>
+          <h2 class="section-title">Skills</h2>
+        </div>
         <div class="row g-4 justify-content-center">
-          <!-- Card 1 -->
-          <div class="col-sm-6 col-md-4">
-            <div class="card h-100 text-center shadow-sm">
-              <div class="card-body">
-                <div class="fs-1 mb-3">🕷️</div>
-                <h5 class="card-title fw-bold">Web Scraping</h5>
-                <p class="card-text text-body-secondary">
-                  Extracting structured data from websites using Python.
-                </p>
-                <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-                  <span class="badge bg-secondary">BeautifulSoup</span>
-                  <span class="badge bg-secondary">Requests</span>
-                </div>
+          <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="skill-card">
+              <div class="skill-icon-wrap skill-icon-blue">
+                <i class="bi bi-search"></i>
+              </div>
+              <h5 class="skill-title">Web Scraping</h5>
+              <p class="skill-desc">Extracting structured data from websites using Python with precision and efficiency.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">BeautifulSoup</span>
+                <span class="skill-tag">Requests</span>
+                <span class="skill-tag">Selenium</span>
               </div>
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="col-sm-6 col-md-4">
-            <div class="card h-100 text-center shadow-sm">
-              <div class="card-body">
-                <div class="fs-1 mb-3">⚙️</div>
-                <h5 class="card-title fw-bold">Automation</h5>
-                <p class="card-text text-body-secondary">
-                  Automating repetitive tasks to save time and reduce errors.
-                </p>
-                <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-                  <span class="badge bg-secondary">Python Scripts</span>
-                  <span class="badge bg-secondary">Scheduling</span>
-                </div>
+          <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card">
+              <div class="skill-icon-wrap skill-icon-purple">
+                <i class="bi bi-lightning-charge-fill"></i>
+              </div>
+              <h5 class="skill-title">Automation</h5>
+              <p class="skill-desc">Automating repetitive tasks to save time, reduce errors, and boost productivity.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python Scripts</span>
+                <span class="skill-tag">Scheduling</span>
+                <span class="skill-tag">Task Queues</span>
               </div>
             </div>
           </div>
-
-          <!-- Card 3 -->
-          <div class="col-sm-6 col-md-4">
-            <div class="card h-100 text-center shadow-sm">
-              <div class="card-body">
-                <div class="fs-1 mb-3">🌐</div>
-                <h5 class="card-title fw-bold">Web Development</h5>
-                <p class="card-text text-body-secondary">
-                  Building simple and functional web apps with Python.
-                </p>
-                <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-                  <span class="badge bg-secondary">Flask</span>
-                  <span class="badge bg-secondary">HTML & CSS</span>
-                </div>
+          <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card">
+              <div class="skill-icon-wrap skill-icon-emerald">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h5 class="skill-title">Web Development</h5>
+              <p class="skill-desc">Building simple and functional web apps with Python backends and clean frontends.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">Bootstrap</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ── Projects ────────────────────────────── -->
     <section id="project">
-      <div class="container py-5">
-        <h2 class="fw-bold mb-4 text-center">Projects</h2>
-
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">What I've built</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
         <div class="row g-4 justify-content-center">
-          <!-- Project 1 -->
-          <div class="col-sm-6 col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <div class="fs-1 mb-3">🛒</div>
-                <h5 class="card-title fw-bold">Tokopedia Competitor Scraper</h5>
-                <p class="card-text text-body-secondary">
-                  A Python-based tool to scrape product listings from Tokopedia
-                  based on keywords, analyze pricing data, and generate a
-                  formatted Excel report with charts and segment breakdowns.
-                </p>
-                <div class="d-flex flex-wrap gap-2 mt-3">
-                  <span class="badge bg-secondary">Python</span>
-                  <span class="badge bg-secondary">BeautifulSoup</span>
-                  <span class="badge bg-secondary">Requests</span>
-                  <span class="badge bg-secondary">Selenium</span>
-                  <span class="badge bg-secondary">pandas</span>
+          <div class="col-sm-10 col-md-5" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-card">
+              <div class="project-card-header project-header-blue">
+                <div class="project-icon">🛒</div>
+                <div class="project-header-dots">
+                  <span></span><span></span><span></span>
                 </div>
               </div>
-              <div class="card-footer bg-transparent d-flex gap-2">
-                <a
-                  href="https://github.com/arlearning313-code/tokopedia-competitor-scraper.git"
-                  target="_blank"
-                  class="btn btn-sm btn-secondary w-100"
-                >
-                  GitHub
+              <div class="project-card-body">
+                <h5 class="project-title">Tokopedia Competitor Scraper</h5>
+                <p class="project-desc">A Python-based tool to scrape product listings from Tokopedia based on keywords, analyze pricing data, and generate a formatted Excel report with charts and segment breakdowns.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">BeautifulSoup</span>
+                  <span class="project-tag">Requests</span>
+                  <span class="project-tag">Selenium</span>
+                  <span class="project-tag">pandas</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/arlearning313-code/tokopedia-competitor-scraper.git" target="_blank" class="btn-project-github">
+                  <i class="bi bi-github me-2"></i>View on GitHub
                 </a>
               </div>
             </div>
           </div>
-
-          <!-- Project 2 - Coming Soon -->
-          <div class="col-sm-6 col-md-4">
-            <div class="card h-100 shadow-sm border-dashed">
-              <div
-                class="card-body text-center d-flex flex-column justify-content-center"
-              >
-                <div class="fs-1 mb-3">🔧</div>
-                <h5 class="card-title fw-bold text-body-secondary">
-                  Next Project
-                </h5>
-                <p class="card-text text-body-secondary">
-                  Currently in progress. Check back soon.
-                </p>
+          <div class="col-sm-10 col-md-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-card-header project-header-dashed">
+                <div class="project-icon">🔧</div>
+              </div>
+              <div class="project-card-body text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 180px;">
+                <h5 class="project-title" style="color: var(--text-secondary);">Next Project</h5>
+                <p class="project-desc">Currently in progress. Check back soon.</p>
+                <div class="coming-soon-badge">Coming Soon</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact">
-      <div class="container py-5">
-        <h2 class="fw-bold mb-2 text-center">Contact</h2>
-        <p class="text-center text-body-secondary mb-5">
-          Have a project in mind? Let's talk.
-        </p>
 
+    <!-- ── Contact ─────────────────────────────── -->
+    <section id="contact" class="section-alt">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">Get in touch</span>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Have a project in mind? Let's talk.</p>
+        </div>
         <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card shadow-sm">
-              <div class="card-body p-4">
-                <!-- Email -->
-                <div class="d-flex align-items-center gap-3 mb-4">
-                  <div class="fs-3">📧</div>
-                  <div>
-                    <div class="fw-bold">Email</div>
-                    <a
-                      href="mailto:arlearning313@gmail.com"
-                      class="text-body-secondary text-decoration-none"
-                    >
-                      arlearning313@gmail.com
-                    </a>
-                  </div>
+          <div class="col-md-7 col-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-card">
+              <div class="contact-item">
+                <div class="contact-icon-wrap">
+                  <i class="bi bi-envelope-fill"></i>
                 </div>
-
-                <!-- GitHub -->
-                <div class="d-flex align-items-center gap-3 mb-4">
-                  <div class="fs-3">💻</div>
-                  <div>
-                    <div class="fw-bold">GitHub</div>
-                    <a
-                      href="https://github.com/arlearning313-code"
-                      target="_blank"
-                      class="text-body-secondary text-decoration-none"
-                    >
-                      github.com/arlearning313-code
-                    </a>
-                  </div>
+                <div class="contact-info">
+                  <div class="contact-label">Email</div>
+                  <a href="mailto:arlearning313@gmail.com" class="contact-value">arlearning313@gmail.com</a>
                 </div>
-
-                <!-- Status -->
-                <div class="d-flex align-items-center gap-3 mb-4">
-                  <div class="fs-3">🟢</div>
-                  <div>
-                    <div class="fw-bold">Status</div>
-                    <span class="text-body-secondary"
-                      >Available for freelance work</span
-                    >
-                  </div>
-                </div>
-
-                <a
-                  href="mailto:arlearning313@gmail.com"
-                  class="btn btn-secondary w-100 mt-2"
-                >
-                  Send Me an Email
-                </a>
               </div>
+              <div class="contact-divider"></div>
+              <div class="contact-item">
+                <div class="contact-icon-wrap">
+                  <i class="bi bi-github"></i>
+                </div>
+                <div class="contact-info">
+                  <div class="contact-label">GitHub</div>
+                  <a href="https://github.com/arlearning313-code" target="_blank" class="contact-value">github.com/arlearning313-code</a>
+                </div>
+              </div>
+              <div class="contact-divider"></div>
+              <div class="contact-item">
+                <div class="contact-icon-wrap contact-icon-green">
+                  <i class="bi bi-circle-fill" style="font-size: 0.65rem;"></i>
+                </div>
+                <div class="contact-info">
+                  <div class="contact-label">Status</div>
+                  <span class="contact-value contact-available">Available for freelance work</span>
+                </div>
+              </div>
+              <a href="mailto:arlearning313@gmail.com" class="btn btn-primary-custom w-100 mt-4 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-send"></i> Send Me an Email
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    // ─── Theme Toggle ───────────────────────────────
-    const toggleBtn = document.getElementById("theme-toggle");
-    const themeIcon = document.getElementById("theme-icon");
-    const html = document.documentElement;
 
-    // Cek preferensi tersimpan
-    const savedTheme = localStorage.getItem("theme") || "light";
-    html.setAttribute("data-bs-theme", savedTheme);
-    themeIcon.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+    <!-- ── Footer ──────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-brand">Arif<span class="brand-accent">.</span></span>
+          <span class="footer-copy">© 2025 Arif Rahman. Built with Python &amp; Bootstrap.</span>
+          <div class="footer-links">
+            <a href="https://github.com/arlearning313-code" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="mailto:arlearning313@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    toggleBtn.addEventListener("click", () => {
-      const isDark = html.getAttribute("data-bs-theme") === "dark";
-      const newTheme = isDark ? "light" : "dark";
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // ── Init AOS ─────────────────────────────
+      AOS.init({ once: true, duration: 650, easing: 'ease-out-cubic', offset: 60 });
 
-      html.setAttribute("data-bs-theme", newTheme);
-      themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
-      localStorage.setItem("theme", newTheme);
-    });
+      // ── Theme Toggle ──────────────────────────
+      const toggleBtn  = document.getElementById('theme-toggle');
+      const themeIcon  = document.getElementById('theme-icon');
+      const html       = document.documentElement;
 
-    // ─── Hide/Show Navbar on Scroll ──────────────────
-    let lastScrollY = window.scrollY;
-    let isNavClick = false;
-    const navbar = document.getElementById("mainNavbar");
-
-    // Tandai kalau user klik nav link
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener("click", () => {
-        isNavClick = true;
-        navbar.classList.remove("hidden");
-
-        // Reset flag setelah scroll selesai
-        setTimeout(() => {
-          isNavClick = false;
-          lastScrollY = window.scrollY;
-        }, 800);
-      });
-    });
-
-    window.addEventListener("scroll", () => {
-      if (isNavClick) return; // Abaikan scroll dari klik nav
-
-      if (window.scrollY > lastScrollY && window.scrollY > 80) {
-        navbar.classList.add("hidden");
-      } else {
-        navbar.classList.remove("hidden");
+      function applyTheme(theme) {
+        html.setAttribute('data-bs-theme', theme);
+        themeIcon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
+        localStorage.setItem('theme', theme);
       }
-      lastScrollY = window.scrollY;
-    });
-  </script>
+
+      applyTheme(localStorage.getItem('theme') || 'light');
+
+      toggleBtn.addEventListener('click', () => {
+        applyTheme(html.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark');
+      });
+
+      // ── Navbar Hide / Show on Scroll ──────────
+      let lastScrollY = window.scrollY;
+      let isNavClick  = false;
+      const navbar    = document.getElementById('mainNavbar');
+
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+          isNavClick = true;
+          navbar.classList.remove('navbar-hidden');
+          setTimeout(() => { isNavClick = false; lastScrollY = window.scrollY; }, 800);
+        });
+      });
+
+      window.addEventListener('scroll', () => {
+        if (isNavClick) return;
+        navbar.classList.toggle('navbar-hidden',  window.scrollY > lastScrollY && window.scrollY > 80);
+        navbar.classList.toggle('navbar-scrolled', window.scrollY > 20);
+        lastScrollY = window.scrollY;
+      });
+
+      // ── Typing Animation ──────────────────────
+      const phrases  = ['Python scripts.', 'web scrapers.', 'automation tools.', 'Flask apps.', 'data pipelines.'];
+      let pIdx = 0, cIdx = 0, deleting = false;
+      const el = document.getElementById('typed-text');
+
+      function typeLoop() {
+        const word = phrases[pIdx];
+        el.textContent = deleting ? word.slice(0, cIdx--) : word.slice(0, cIdx++);
+
+        if (!deleting && cIdx > word.length) {
+          deleting = true;
+          setTimeout(typeLoop, 1600);
+          return;
+        }
+        if (deleting && cIdx < 0) {
+          deleting = false;
+          pIdx = (pIdx + 1) % phrases.length;
+          setTimeout(typeLoop, 400);
+          return;
+        }
+        setTimeout(typeLoop, deleting ? 50 : 90);
+      }
+
+      typeLoop();
+    </script>
+  </body>
 </html>
